@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collins Septic Services — Septic Pumping & Repair | North Judson, IN</title>
+<meta name="description" content="Septic tank pumping, inspections, repair and emergency service for rural Starke & Pulaski County. Locally based in North Judson. Call (574) 896-3672.">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --soil:#2e2019;
+  --soil-2:#3d2c20;
+  --rust:#c1541f;
+  --rust-dark:#9a3f13;
+  --field:#5c6b47;
+  --field-dark:#465435;
+  --paper:#efe7d6;
+  --paper-dim:#e3d8c2;
+  --ink:#241a13;
+  --line:rgba(46,32,25,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',sans-serif;
+  background:var(--soil);
+  color:var(--paper);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+/* grain */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.35;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.stencil{font-family:'Saira Stencil One',sans-serif;font-weight:400;letter-spacing:.02em;text-transform:uppercase}
+.cond{font-family:'Barlow Condensed',sans-serif}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* skip link */
+.skip{position:absolute;left:-999px;top:0;background:var(--rust);color:#fff;padding:.6rem 1rem;z-index:100}
+.skip:focus{left:0}
+
+/* ============ TOP BAR ============ */
+.topbar{
+  background:var(--rust);color:#fff;
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;
+  padding:.5rem 1rem;text-align:center;
+}
+.topbar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+header.site{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 1.2rem;border-bottom:2px solid rgba(239,231,214,.15);
+  gap:1rem;flex-wrap:wrap;
+}
+.brandmark{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.brandmark svg{flex:none}
+.brandmark span{font-size:1.05rem;line-height:1.1}
+nav.main{display:flex;gap:1.2rem;font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem}
+nav.main a{text-decoration:none;color:var(--paper-dim);border-bottom:2px solid transparent;padding-bottom:2px}
+nav.main a:hover,nav.main a:focus{color:#fff;border-color:var(--rust)}
+
+/* ============ HERO: TRUCK DOOR PANEL ============ */
+.hero{
+  padding:2.5rem 1.2rem 3.5rem;
+  background:
+    radial-gradient(ellipse at 20% 0%,rgba(193,84,31,.12),transparent 55%),
+    var(--soil);
+}
+.door{
+  max-width:760px;margin:0 auto;
+  background:linear-gradient(170deg,#4a5a3b 0%,var(--field-dark) 45%,#3a4630 100%);
+  border:3px solid #1f2618;
+  border-radius:14px;
+  box-shadow:0 20px 60px rgba(0,0,0,.5), inset 0 2px 0 rgba(255,255,255,.12), inset 0 -14px 30px rgba(0,0,0,.3);
+  padding:2.2rem 1.4rem 2.6rem;
+  position:relative;
+  text-align:center;
+}
+/* rivets */
+.door::before,.door::after{
+  content:"";position:absolute;width:12px;height:12px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#d8d2c2,#6b6558 70%);
+  box-shadow:0 1px 3px rgba(0,0,0,.6);
+  top:14px;
+}
+.door::before{left:14px}
+.door::after{right:14px}
+.rivet-b::before,.rivet-b::after{
+  content:"";position:absolute;width:12px;height:12px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#d8d2c2,#6b6558 70%);
+  box-shadow:0 1px 3px rgba(0,0,0,.6);bottom:14px;
+}
+.rivet-b::before{left:14px}
+.rivet-b::after{right:14px}
+
+.door .est{
+  font-size:.8rem;letter-spacing:.35em;color:#d9d3bf;
+  border-top:1px solid rgba(239,231,214,.35);border-bottom:1px solid rgba(239,231,214,.35);
+  display:inline-block;padding:.35rem 1rem;margin-bottom:1.2rem;
+  text-transform:uppercase;font-family:'Barlow Condensed',sans-serif;font-weight:600;
+}
+.door h1{
+  color:var(--paper);
+  font-size:clamp(2.4rem,9vw,4.6rem);
+  line-height:.95;
+  text-shadow:2px 3px 0 rgba(0,0,0,.35);
+}
+.door h1 .rust{color:#e8935e}
+.door .tag{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;
+  letter-spacing:.22em;font-size:clamp(.8rem,2.6vw,1rem);
+  color:#e3ddc8;margin:.9rem 0 1.6rem;
+}
+.door .phone-plate{
+  display:inline-block;text-decoration:none;
+  background:var(--paper);color:var(--ink);
+  border:3px solid var(--ink);border-radius:8px;
+  padding:.7rem 1.4rem;
+  font-size:clamp(1.5rem,6.5vw,2.4rem);line-height:1;
+  box-shadow:0 6px 0 rgba(0,0,0,.35);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.door .phone-plate:hover{transform:translateY(3px);box-shadow:0 3px 0 rgba(0,0,0,.35)}
+.door .phone-plate small{
+  display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rust-dark);margin-bottom:.3rem;
+}
+.door .under{
+  margin-top:1.4rem;font-family:'Barlow Condensed',sans-serif;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;color:#cfc9b4;
+}
+.door .under strong{color:#fff}
+.hero-foot{
+  max-width:760px;margin:1.4rem auto 0;display:flex;justify-content:space-between;
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;
+  letter-spacing:.12em;font-size:.78rem;color:rgba(239,231,214,.55);flex-wrap:wrap;gap:.5rem;
+}
+
+/* ============ WORK ORDER ============ */
+.workorder{
+  background:var(--paper);color:var(--ink);
+  padding:3.5rem 1.2rem 4rem;
+  border-top:6px solid var(--rust);
+}
+.wo-sheet{max-width:860px;margin:0 auto}
+.wo-head{
+  display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:.6rem;
+  border-bottom:3px solid var(--ink);padding-bottom:.8rem;margin-bottom:2rem;
+}
+.wo-head h2{font-size:clamp(1.8rem,6vw,2.8rem);line-height:1;color:var(--ink)}
+.wo-head .wo-num{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;font-size:.85rem;color:var(--rust-dark);
+}
+.wo-row{
+  display:grid;grid-template-columns:1fr;gap:0;
+  border:2px solid var(--ink);margin-bottom:2.2rem;
+  background:#fff;
+}
+.wo-field{padding:1rem 1.1rem;border-bottom:2px solid var(--ink)}
+.wo-field:last-child{border-bottom:none}
+.wo-field .lbl{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;font-size:.7rem;color:var(--field-dark);display:block;margin-bottom:.25rem;
+}
+.wo-field .val{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.15rem;line-height:1.3}
+
+/* services as line items */
+.line-items{list-style:none;counter-reset:job}
+.line-items li{
+  counter-increment:job;
+  display:flex;align-items:baseline;gap:1rem;
+  padding:1.1rem .4rem;border-bottom:1px dashed var(--line);
+  transition:background .15s ease,padding-left .15s ease;
+}
+.line-items li:hover{background:rgba(193,84,31,.07);padding-left:.9rem}
+.line-items li::before{
+  content:"0" counter(job);
+  font-family:'Saira Stencil One',sans-serif;
+  color:var(--rust);font-size:1.1rem;flex:none;width:2.2rem;
+}
+.line-items .svc{flex:1}
+.line-items .svc strong{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;font-size:1.25rem;display:block;
+}
+.line-items .svc span{font-size:.95rem;color:#4c4136}
+.line-items .chk{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.15em;font-size:.7rem;color:var(--field-dark);
+  border:2px solid var(--field-dark);padding:.2rem .5rem;flex:none;
+}
+@media(max-width:520px){.line-items .chk{display:none}}
+
+/* ============ AREA / DISPATCH ============ */
+.dispatch{
+  background:var(--field-dark);color:var(--paper);
+  padding:3.5rem 1.2rem;
+  border-top:6px solid var(--soil);
+}
+.dis-wrap{max-width:860px;margin:0 auto;display:grid;gap:2.2rem;grid-template-columns:1fr}
+@media(min-width:760px){.dis-wrap{grid-template-columns:1.1fr .9fr;align-items:start}}
+.dispatch h2{font-size:clamp(1.8rem,6vw,2.6rem);line-height:1;margin-bottom:1.1rem}
+.dispatch h2 .rust{color:#eda06e}
+.dispatch p{max-width:52ch;color:#e6e0cd;margin-bottom:1rem}
+.area-list{
+  list-style:none;border:2px dashed rgba(239,231,214,.4);padding:1.3rem 1.4rem;
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;
+  letter-spacing:.08em;font-size:1.05rem;
+}
+.area-list li{padding:.4rem 0;border-bottom:1px solid rgba(239,231,214,.15);display:flex;gap:.6rem;align-items:center}
+.area-list li:last-child{border-bottom:none}
+.area-list svg{flex:none}
+.area-note{
+  margin-top:.9rem;font-size:.85rem;color:#cfc9b4;font-family:'Barlow',sans-serif;
+  text-transform:none;letter-spacing:0;
+}
+
+/* ============ WHO'S ON THE TRUCK ============ */
+.crew{background:var(--soil-2);padding:3.5rem 1.2rem;border-top:6px solid var(--rust)}
+.crew-wrap{max-width:860px;margin:0 auto}
+.crew h2{font-size:clamp(1.8rem,6vw,2.6rem);line-height:1;margin-bottom:1.4rem}
+.crew h2 .rust{color:#e8935e}
+.crew-grid{display:grid;gap:1.2rem;grid-template-columns:1fr}
+@media(min-width:700px){.crew-grid{grid-template-columns:repeat(3,1fr)}}
+.crew-card{
+  border:2px solid rgba(239,231,214,.2);padding:1.3rem;
+  background:rgba(0,0,0,.15);
+  transition:border-color .15s ease,transform .15s ease;
+}
+.crew-card:hover{border-color:var(--rust);transform:translateY(-3px)}
+.crew-card h3{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;font-size:1.15rem;margin:.7rem 0 .4rem;color:#fff;
+}
+.crew-card p{font-size:.92rem;color:#d5cfba}
+.rating-strip{
+  margin-top:2.2rem;border:2px solid rgba(239,231,214,.25);
+  display:flex;align-items:center;gap:1.2rem;padding:1.1rem 1.3rem;flex-wrap:wrap;
+  background:rgba(0,0,0,.2);
+}
+.rating-strip .big{font-size:2.4rem;line-height:1;color:#e8935e}
+.rating-strip .stars{color:#e8935e;letter-spacing:.15em;font-size:1.1rem}
+.rating-strip p{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:1rem;color:#e6e0cd}
+
+/* ============ EMERGENCY STRIP ============ */
+.emergency{
+  background:repeating-linear-gradient(-45deg,var(--rust) 0 26px,var(--rust-dark) 26px 52px);
+  padding:.5rem;
+}
+.emergency-inner{
+  background:var(--soil);text-align:center;padding:2.6rem 1.2rem;
+}
+.emergency h2{font-size:clamp(1.7rem,6.5vw,2.8rem);color:#fff;line-height:1}
+.emergency p{
+  font-family:'Barlow Condensed',sans-serif;font-weight:500;letter-spacing:.05em;
+  color:#d5cfba;margin:.8rem auto 1.4rem;max-width:46ch;font-size:1.05rem;
+}
+.btn-call{
+  display:inline-block;text-decoration:none;background:var(--rust);color:#fff;
+  font-family:'Saira Stencil One',sans-serif;text-transform:uppercase;
+  font-size:clamp(1.2rem,4.5vw,1.7rem);padding:.85rem 1.8rem;border-radius:6px;
+  border:3px solid #fff;box-shadow:0 6px 0 rgba(0,0,0,.45);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.btn-call:hover{transform:translateY(3px);box-shadow:0 3px 0 rgba(0,0,0,.45)}
+
+/* ============ CONTACT / FOOTER ============ */
+.contact{background:var(--paper);color:var(--ink);padding:3.5rem 1.2rem}
+.contact-wrap{max-width:860px;margin:0 auto;display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:700px){.contact-wrap{grid-template-columns:1fr 1fr}}
+.contact h2{font-size:clamp(1.8rem,6vw,2.5rem);color:var(--ink);line-height:1;margin-bottom:1rem}
+.contact-card{border:2px solid var(--ink);background:#fff;padding:1.4rem}
+.contact-card .lbl{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;font-size:.72rem;color:var(--rust-dark);display:block;margin-bottom:.2rem;
+}
+.contact-card p{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.2rem;margin-bottom:1rem}
+.contact-card p:last-child{margin-bottom:0}
+.contact-card a{color:var(--ink)}
+.how p{margin-bottom:.9rem;color:#3b3226}
+.how ol{margin:.5rem 0 0 1.2rem;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.1rem}
+.how ol li{padding:.25rem 0}
+
+footer.site-foot{
+  background:var(--soil);padding:2rem 1.2rem;text-align:center;
+  font-family:'Barlow Condensed',sans-serif;letter-spacing:.08em;font-size:.85rem;color:#a89f89;
+  border-top:2px solid rgba(239,231,214,.15);
+}
+footer.site-foot .cred{margin-top:.5rem;font-size:.75rem;color:#7d7563}
+footer.site-foot a{color:#cfc9b4}
+
+/* subtle reveal */
+@media(prefers-reduced-motion:no-preference){
+  .rev{animation:rise .7s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#services">Skip to services</a>
+
+<div class="topbar" role="banner">
+  Septic backup? Don't wait — <a href="tel:+15748963672">Call (574) 896-3672</a>
+</div>
+
+<header class="site">
+  <a class="brandmark stencil" href="#top" aria-label="Collins Septic Services home">
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="31" height="31" rx="4" fill="none" stroke="#c1541f" stroke-width="3"/>
+      <text x="17" y="24" text-anchor="middle" font-family="'Saira Stencil One',sans-serif" font-size="17" fill="#efe7d6">CS</text>
+    </svg>
+    <span>Collins<br>Septic</span>
+  </a>
+  <nav class="main" aria-label="Main">
+    <a href="#services">Services</a>
+    <a href="#area">Service Area</a>
+    <a href="#crew">Who We Are</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO: truck door panel -->
+  <section class="hero">
+    <div class="door rivet-b rev">
+      <p class="est">North Judson &bull; Indiana</p>
+      <h1 class="stencil">Collins<br><span class="rust">Septic</span> Services</h1>
+      <p class="tag">Pumping &bull; Repair &bull; Install &bull; Emergency</p>
+      <a class="phone-plate stencil" href="tel:+15748963672">
+        <small>Call the truck</small>
+        (574) 896-3672
+      </a>
+      <p class="under">Serving rural <strong>Starke &amp; Pulaski County</strong> — no municipal sewer, no problem.</p>
+    </div>
+    <div class="hero-foot">
+      <span>&#9733; 4.8 rated by 23 local customers</span>
+      <span>7080 S 250 W, North Judson, IN</span>
+    </div>
+  </section>
+
+  <!-- WORK ORDER -->
+  <section class="workorder" id="services">
+    <div class="wo-sheet">
+      <div class="wo-head">
+        <h2 class="stencil">Work Order</h2>
+        <span class="wo-num">Form CS-2026 &bull; Service Ticket</span>
+      </div>
+
+      <div class="wo-row">
+        <div class="wo-field">
+          <span class="lbl">Customer</span>
+          <span class="val">Homeowners, farmers &amp; rural property owners on well-and-septic</span>
+        </div>
+        <div class="wo-field">
+          <span class="lbl">Area Served</span>
+          <span class="val">North Judson and surrounding Starke / Pulaski County</span>
+        </div>
+        <div class="wo-field">
+          <span class="lbl">Response</span>
+          <span class="val">Straight answers, honest pricing, no upselling — call and talk to us direct</span>
+        </div>
+      </div>
+
+      <ul class="line-items">
+        <li>
+          <div class="svc">
+            <strong>Septic Tank Pumping</strong>
+            <span>Routine pump-outs that keep your system out of trouble. Most rural tanks need it every 3–5 years — longer than that and you're gambling.</span>
+          </div>
+          <span class="chk">Scheduled</span>
+        </li>
+        <li>
+          <div class="svc">
+            <strong>Septic System Inspections</strong>
+            <span>Full-system checks, including real estate transfer inspections for buying or selling rural property in Starke County.</span>
+          </div>
+          <span class="chk">Documented</span>
+        </li>
+        <li>
+          <div class="svc">
+            <strong>Septic Repair &amp; Replacement</strong>
+            <span>Diagnosis of older and failing tanks — we tell you what can be fixed and what can't, and we don't replace what doesn't need replacing.</span>
+          </div>
+          <span class="chk">Honest Quote</span>
+        </li>
+        <li>
+          <div class="svc">
+            <strong>Drain Field Service</strong>
+            <span>Soggy spots, sewage smell, slow drains — drain field problems in this county's soil have patterns. We know them.</span>
+          </div>
+          <span class="chk">Diagnosed</span>
+        </li>
+        <li>
+          <div class="svc">
+            <strong>Emergency Septic Calls</strong>
+            <span>A backed-up tank on a rural property isn't an inconvenience, it's an emergency. Call the number at the top of this page.</span>
+          </div>
+          <span class="chk">Priority</span>
+        </li>
+        <li>
+          <div class="svc">
+            <strong>New Septic System Installation</strong>
+            <span>New builds and full system replacements sized for your household and your ground — including agricultural properties.</span>
+          </div>
+          <span class="chk">Installed</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="dispatch" id="area">
+    <div class="dis-wrap">
+      <div>
+        <h2 class="stencil">Where the <span class="rust">truck rolls</span></h2>
+        <p>We're based on 250 W outside North Judson — not dispatched from a call center two counties over. If your place runs on a well and a septic tank, you're the customer we built this business for.</p>
+        <p>That matters because septic work here isn't generic. Starke County soil, older tanks on farmsteads, systems that were put in decades before code caught up — we've had our hands in most of it.</p>
+      </div>
+      <div>
+        <ul class="area-list">
+          <li><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect width="12" height="12" fill="#eda06e"/></svg> North Judson</li>
+          <li><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect width="12" height="12" fill="#eda06e"/></svg> Knox</li>
+          <li><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect width="12" height="12" fill="#eda06e"/></svg> Hamlet &amp; Grovertown</li>
+          <li><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect width="12" height="12" fill="#eda06e"/></svg> San Pierre</li>
+          <li><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect width="12" height="12" fill="#eda06e"/></svg> Winamac &amp; rural Pulaski County</li>
+          <li><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect width="12" height="12" fill="#eda06e"/></svg> Surrounding Starke County townships</li>
+        </ul>
+        <p class="area-note">On the edge of the map? Call anyway — if we can get the truck there, we usually will.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREW -->
+  <section class="crew" id="crew">
+    <div class="crew-wrap">
+      <h2 class="stencil rev">Who's on <span class="rust">the truck</span></h2>
+      <div class="crew-grid">
+        <div class="crew-card">
+          <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="16" fill="none" stroke="#e8935e" stroke-width="2.5"/><path d="M18 8v10l7 5" fill="none" stroke="#e8935e" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <h3>Local, not franchised</h3>
+          <p>Collins Septic is based right here in North Judson. When you call, you're talking to the people who show up — not a booking desk in another state.</p>
+        </div>
+        <div class="crew-card">
+          <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><path d="M4 26c4-2 8-14 14-14s10 12 14 14" fill="none" stroke="#e8935e" stroke-width="2.5" stroke-linecap="round"/><path d="M4 30h28" stroke="#e8935e" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <h3>Knows this ground</h3>
+          <p>Drain fields behave differently in this county's soil. We've diagnosed enough older and failing tanks around here to know what we're looking at fast.</p>
+        </div>
+        <div class="crew-card">
+          <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><path d="M6 19l8 8L30 9" fill="none" stroke="#e8935e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>No upselling</h3>
+          <p>If a pump-out fixes it, that's what we'll tell you. We'd rather keep a customer for twenty years than sell one replacement they didn't need.</p>
+        </div>
+      </div>
+      <div class="rating-strip">
+        <span class="big stencil">4.8</span>
+        <div>
+          <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Rated 4.8 out of 5 by 23 local customers on Google — neighbors, not strangers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMERGENCY -->
+  <section class="emergency">
+    <div class="emergency-inner">
+      <h2 class="stencil">Tank backing up right now?</h2>
+      <p>Sewage in the yard or backing into the house means stop scrolling and pick up the phone. Emergency calls go straight to us.</p>
+      <a class="btn-call" href="tel:+15748963672">Call (574) 896-3672</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-wrap">
+      <div class="how">
+        <h2 class="stencil">Get on the schedule</h2>
+        <p>No forms, no portals. Septic work gets sorted the same way it always has around here — a phone call and a straight conversation.</p>
+        <ol>
+          <li>Call and tell us what's going on.</li>
+          <li>We'll give you honest options and a straight price.</li>
+          <li>The truck shows up when we say it will.</li>
+        </ol>
+      </div>
+      <div class="contact-card">
+        <span class="lbl">Phone</span>
+        <p><a href="tel:+15748963672">(574) 896-3672</a></p>
+        <span class="lbl">Shop</span>
+        <p>7080 S 250 W<br>North Judson, IN 46366</p>
+        <span class="lbl">Service Area</span>
+        <p>Starke &amp; Pulaski County, Indiana</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <p>&copy; 2026 Collins Septic Services &bull; North Judson, Indiana &bull; <a href="tel:+15748963672">(574) 896-3672</a></p>
+  <p class="cred">Website sample by Wild Card Creative Co</p>
+</footer>
+
+</body>
+</html>
